@@ -4,15 +4,63 @@
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <meta http-equiv="X-UA-Compatible" content="ie=edge">
-            <title>Title</title>
+            <title>How tf am I supposed to do this?!?</title>
         </head>
 
         <body>
+            
+            <div class="outer">
+
+            </div>
+
+
+
+        <script>
+            const griddivs = 256;
+            alldiv = document.querySelectorAll('.inner');
+            outerdiv = document.querySelector('.outer');
+
+            for (let i = 0; i < griddivs; i++){
+                    
+                    const test = document.createElement('div');
+                    test.setAttribute("class","inner");
+                    outerdiv.appendChild(test);
+            }
+            alldiv = document.querySelectorAll('div');
+            console.log(alldiv);
+            
+            alldiv.forEach((element) => {
+                element.style.borderStyle = "double";
+                element.style.borderColor = "black";
+                element.style.minWidth = "0";
+                element.style.minHeight = "0";
+                element.style.display = "flex";
+                element.style.width = "88px";
+
+            }); 
+
+            outerdiv.style.display = "flex";
+            outerdiv.style.flexShrink = "1";
+            outerdiv.style.flexWrap = "wrap";
+            outerdiv.style.flexDirection = "row";
+            outerdiv.style.flexGrow = "1";
+            outerdiv.style.minWidth = "0";
+            outerdiv.style.minHeight = "0";
+            outerdiv.style.justifyContent = "center";
+
+           document.body.style.display = "flex";
+           document.body.style.flexWrap = "wrap";
+           document.body.style.flexGrow = "1";
+           document.body.style.flexDirection = "row";
+           document.body.style.flexShrink = "1";
+           document.body.style.minHeight = "100vh";
+           document.body.style.justifyContent = "center";
 
 
 
 
-        
+
+        </script>
         </body>
 
     </html>
